@@ -3,16 +3,16 @@
 using namespace std;
 
 int main() {
-    int m, n, k;
-    cin>>m>>n>>k;
+    int rows, cols, choices;
+    cin>>rows>>cols>>choices;
 
-    vector<bool> row_state(m, false);
-    vector<bool> col_state(n, false);
+    vector<bool> row_state(rows, false);
+    vector<bool> col_state(cols, false);
 
     char change;
     int index;
 
-    for(int i = 0; i < k; i++) {
+    for(int i = 0; i<choices; i++) {
         cin>>change>>index;
         if(change == 'R') {
             row_state[index - 1] = !row_state[index - 1];
@@ -22,13 +22,12 @@ int main() {
     }
 
     int gold = 0;
-    for(int i = 0; i<m; i++) {
-        for(int j = 0; j<n; j++) {
+    for(int i = 0; i<rows; i++) {
+        for(int j = 0; j<cols; j++) {
             if((row_state[i] && !col_state[j]) || (!row_state[i] && col_state[j])) {
                 gold++;
             }
         }
     }
-
     cout<<gold<<endl;
 }
