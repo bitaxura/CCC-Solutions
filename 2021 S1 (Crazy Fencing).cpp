@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -9,12 +10,10 @@ int main()
     double height[fences+1];
     double width[fences];
     
-    for (int i = 0; i<=fences; i++)
-    {
+    for (int i = 0; i<=fences; i++){
         cin>>height[i];
     }
-    for(int i =0; i<fences; i++)
-    {
+    for(int i =0; i<fences; i++){
         cin>>width[i];
     }
 
