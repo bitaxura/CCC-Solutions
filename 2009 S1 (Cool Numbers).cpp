@@ -9,10 +9,8 @@ int main()
 
     int counter = 0, i = 1;
 
-    while (pow(i, 6)<=b)
-    {
-        if(pow(i, 6) >= a)
-        {
+    while (pow(i, 6)<=b){
+        if(pow(i, 6) >= a){
             counter++;
         }
         i++;
