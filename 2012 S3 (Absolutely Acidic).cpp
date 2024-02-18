@@ -9,7 +9,7 @@ int main()
 
     map<int,int> r;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++){
         int temp; 
         cin>>temp; 
         r[temp]++;
@@ -20,26 +20,20 @@ int main()
     
     for (auto x: r) 
     {
-        if (x.second > highestx.second || (x.second == highestx.second && x.first > highestx.first)) 
-        {
-            if (highestx.second > highesty.second) 
-            {
+        if (x.second > highestx.second || (x.second == highestx.second && x.first > highestx.first)){
+            if (highestx.second > highesty.second){
                 highesty = highestx;
             }
             highestx = x; 
         } 
-        else if (x.second > highesty.second) 
-        {
+        else if (x.second > highesty.second){
         highesty = x;
         } 
-        else if (x.second == highesty.second) 
-        {
-            if (x.first > highesty.first && highesty.first > highestx.first) 
-            {
+        else if (x.second == highesty.second){
+            if (x.first > highesty.first && highesty.first > highestx.first){
                 highesty = x;
             } 
-            else if (x.first < highesty.first && highesty.first < highestx.first) 
-            {
+            else if (x.first < highesty.first && highesty.first < highestx.first){
                 highesty = x;
             }
         } 
