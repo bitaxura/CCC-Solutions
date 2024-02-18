@@ -22,17 +22,22 @@ int main()
             if(j%2 != 0){
                 if(triangle[i][j]){
                     meters+=3;
-                if(triangle[i-1][j])
-                    meters-=2;
-                if(triangle[i][j-1])
-                    meters-=2;
+                    
+                    if(triangle[i-1][j]){
+                        meters-=2;
+                    }
+                    if(triangle[i][j-1]){
+                        meters-=2;
+                    }
                 }
             }
             else{
                 if(triangle[i][j]){
                     meters+=3;
-                if(triangle[i][j-1])
-                    meters-=2;
+                    
+                    if(triangle[i][j-1]){
+                        meters-=2;
+                }
                 }
             }
         }
