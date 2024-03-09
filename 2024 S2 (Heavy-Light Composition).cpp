@@ -1,13 +1,12 @@
 #include <iostream>
-#include <vector>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 int main(){
     int t, n;
     cin>>t>>n;
 
-    map<char, int> hash;
+    unordered_map<char, int> hash;
 
     for(int i = 0; i<t; i++){
         string word;
@@ -28,4 +27,4 @@ int main(){
         }
         hash.clear();
     }   
-    }
+}
